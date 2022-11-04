@@ -1,0 +1,65 @@
+@import './fonts.scss';
+@import './variables.scss';
+@import './libs/normalize.scss';
+
+//@import './components/all.scss';
+
+
+body {
+  display: grid;
+  grid-template-rows: 1fr repeat(10, 0px);
+  width: 100vw;
+  overflow: hidden overlay;
+  color: rgb(226, 226, 232);
+  background-color: rgb(31, 32, 37);
+}
+
+#root {
+  display: grid;
+
+  @media (min-width: 1024px) {
+    //max-width: 72rem;
+  }
+}
+
+.main-wrapper {
+  display: grid;
+  grid-template: '. . main main main . drawer' 1fr/minmax(0, calc((100% - 1920px) / 2)) 24px minmax(auto, 624px) minmax(auto, 624px) minmax(auto, 624px) minmax(24px, auto) 0;
+
+  @media (max-width: 1919px) {
+    grid-template: '. main . drawer' 1fr/24px calc((100% - 48px) * 1) 24px calc((100% - 48px) * 0);
+  }
+}
+
+.main-block {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 100%;
+  grid-template-rows: 54px 1fr auto;
+  row-gap: 24px;
+}
+
+a {
+  font-family: "Arsenal", Roboto, system-ui, Tahoma, sans-serif;
+  color: #000;
+}
+
+main,
+article,
+aside,
+details,
+footer,
+header,
+menu,
+nav,
+section {
+  display: block;
+}
+
+.horisontPaddingLeft {
+  padding-left: 3.125vw;
+}
+
+.horisontPaddingRight {
+  padding-right: 3.125vw;
+}
