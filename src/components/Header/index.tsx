@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.headerLeftSide}></div>
       <div className={styles.headermidleSide}>
-        <a letter-spacing="3" href="/" className={styles.logoLink}>лайф кодинг</a>
+        <a letter-spacing="4" href="/" className={styles.logoLink}>лайф кодинг</a>
       </div>
       <div className={styles.headerRightSide}></div>
     </header>
